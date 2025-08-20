@@ -6,14 +6,21 @@ const convertBtn = document.getElementById("convertBtn");
 const currencies = ["USD", "INR", "EUR", "GBP", "JPY", "AUD", "CAD"];
 
 // Populate dropdowns
+<<<<<<< HEAD
 currencies.forEach((currency) => {
   fromCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
   toCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
+=======
+currencies.forEach(currency => {
+    fromCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
+    toCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
+>>>>>>> 53c50922f823f33071b035ac5566cfece8469e74
 });
 
 fromCurrency.value = "USD";
 toCurrency.value = "INR";
 
+<<<<<<< HEAD
 // 🔹 Prevent same currency selection
 function preventSameCurrency() {
   for (let option of toCurrency.options) {
@@ -56,6 +63,33 @@ async function convertCurrency() {
   } catch (error) {
     result.innerText = "⚠️ Error fetching exchange rates.";
   }
+=======
+async function convertCurrency() {
+    let amount = document.getElementById("amount").value;
+    if (!amount) {
+        alert("Please enter an amount");
+        return;
+    }
+
+    let from = fromCurrency.value;
+    let to = toCurrency.value;
+
+    try {
+        // Fetch rates for the "from" currency
+        let response = await fetch(`https://api.exchangerate.host/latest?base=${from}`);
+        let data = await response.json();
+
+        if (data && data.rates && data.rates[to]) {
+            let rate = data.rates[to];
+            let converted = (amount * rate).toFixed(2);
+            result.innerText = `${amount} ${from} = ${converted} ${to}`;
+        } else {
+            result.innerText = "Conversion failed. Try again.";
+        }
+    } catch (error) {
+        result.innerText = "Error fetching exchange rates.";
+    }
+>>>>>>> 53c50922f823f33071b035ac5566cfece8469e74
 }
 
 convertBtn.addEventListener("click", convertCurrency);
