@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Currency Converter 💱</h2>
+
+      <input type="number" id="amount" placeholder="Enter amount" />
+
+      <div class="selectors">
+        <select id="fromCurrency"></select>
+        <select id="toCurrency"></select>
+      </div>
+
+      <button id="convertBtn">Convert</button>
+
+      <p id="result"></p>
+    </div>
+
+    <!-- 🔻 Footer -->
+    <footer>
+      <p>Made by ❤️<strong>Tejasvi Max</strong></p>
+      <p>&copy; <span id="year"></span> All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Auto update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
