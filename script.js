@@ -42,6 +42,19 @@ preventSameCurrency();
 fromCurrency.addEventListener("change", preventSameCurrency);
 toCurrency.addEventListener("change", preventSameCurrency);
 
+// 🔄 Swap currencies
+document.getElementById("swapBtn").addEventListener("click", () => {
+    let temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = temp;
+
+    // Re-run same-currency prevention
+    preventSameCurrency();
+
+    // 🔹 Auto convert after swap
+    convertCurrency();
+});
+
 async function convertCurrency() {
     let amount = parseFloat(document.getElementById("amount").value);
     if (isNaN(amount) || amount <= 0) {
