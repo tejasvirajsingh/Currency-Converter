@@ -11,7 +11,7 @@ body {
 
 .container {
   background: #e0ecee;
-  padding: 60px 80px;
+  padding: 30px 10px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
@@ -25,11 +25,11 @@ h2 {
 }
 
 input, select, button {
-  margin: 15px 0;
+  margin: 20px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 button {
