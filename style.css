@@ -5,31 +5,36 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* ✅ changed from height to min-height */
   margin: 0;
+  padding: 10px; /* ✅ added padding so content isn’t cut */
 }
 
 .container {
   background: #e0ecee;
-  padding: 30px 10px;
+  padding: 20px 15px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
-  width: 320px;
+  width: 100%; /* ✅ full width on mobile */
+  max-width: 350px; /* ✅ but not too big */
   animation: fadeIn 0.5s ease-in-out;
 }
 
 h2 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 22px; /* ✅ smaller heading for mobile */
 }
 
 input, select, button {
-  margin: 20px 0;
+  width: 100%; /* ✅ take full width on small screens */
+  margin: 12px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 19px;
+  font-size: 16px; /* ✅ smaller font for mobile */
+  box-sizing: border-box;
 }
 
 button {
@@ -57,7 +62,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .swap-btn {
@@ -97,4 +102,20 @@ footer strong {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Mobile-specific adjustments */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+  input, select, button {
+    font-size: 15px;
+    padding: 8px;
+  }
+  .swap-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 }
