@@ -1,39 +1,48 @@
+/* ========== Global Body Styling ========== */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+
+  /* ✅ Use flex to arrange converter + footer */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* keeps footer at bottom */
   align-items: center;
-  min-height: 100vh; /* ✅ changed from height to min-height */
+
+  min-height: 100vh; /* ✅ fills whole screen height */
   margin: 0;
-  padding: 10px; /* ✅ added padding so content isn’t cut */
+  padding: 15px; /* ✅ avoids content sticking to edges */
 }
 
+/* ========== Converter Card ========== */
 .container {
   background: #e0ecee;
-  padding: 20px 15px;
+  padding: 25px 15px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
-  width: 100%; /* ✅ full width on mobile */
-  max-width: 350px; /* ✅ but not too big */
+
+  width: 100%;         /* ✅ full width on mobile */
+  max-width: 360px;    /* ✅ but not too wide */
+  margin: auto;        /* ✅ centers vertically */
+
   animation: fadeIn 0.5s ease-in-out;
 }
 
 h2 {
   margin-bottom: 20px;
   color: #333;
-  font-size: 22px; /* ✅ smaller heading for mobile */
+  font-size: 22px; /* ✅ readable on all screens */
 }
 
+/* ========== Inputs, Dropdowns, Buttons ========== */
 input, select, button {
-  width: 100%; /* ✅ take full width on small screens */
-  margin: 12px 0;
+  width: 100%;       /* ✅ full width on mobile */
+  margin: 12px 0;    /* ✅ less spacing for compact view */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px; /* ✅ smaller font for mobile */
+  font-size: 16px;   /* ✅ smaller for mobile */
   box-sizing: border-box;
 }
 
@@ -49,20 +58,20 @@ button:hover {
   background: #45a049;
 }
 
-/* Result */
+/* ========== Result Text ========== */
 #result {
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: bold;
   color: #333;
 }
 
-/* Selectors (dropdowns + swap button) */
+/* ========== Currency Selectors (dropdowns + swap button) ========== */
 .selectors {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 10px; /* ✅ smaller gap for mobile */
 }
 
 .swap-btn {
@@ -82,12 +91,12 @@ button:hover {
   transform: rotate(180deg);
 }
 
-/* Footer Styling */
+/* ========== Footer ========== */
 footer {
-  margin-top: 20px;
   text-align: center;
   font-size: 14px;
   color: #1a1919;
+  margin-top: 20px;
 }
 
 footer p {
@@ -98,13 +107,13 @@ footer strong {
   color: #161510;
 }
 
-/* Animation */
+/* ========== Animation ========== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ✅ Mobile-specific adjustments */
+/* ========== Mobile Optimizations ========== */
 @media (max-width: 480px) {
   h2 {
     font-size: 20px;
