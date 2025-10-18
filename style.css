@@ -114,7 +114,7 @@ footer strong {
 }
 
 /* ========== Mobile Optimizations ========== */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   h2 {
     font-size: 20px;
   }
@@ -123,8 +123,8 @@ footer strong {
     padding: 8px;
   }
   .swap-btn {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     font-size: 18px;
   }
 }
