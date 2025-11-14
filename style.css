@@ -1,48 +1,40 @@
-/* ========== Global Body Styling ========== */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-
-  /* ✅ Use flex to arrange converter + footer */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* keeps footer at bottom */
+  justify-content: space-between;
   align-items: center;
-
-  min-height: 100vh; /* ✅ fills whole screen height */
+  min-height: 100vh;
   margin: 0;
-  padding: 15px; /* ✅ avoids content sticking to edges */
+  padding: 15px;
 }
 
-/* ========== Converter Card ========== */
 .container {
   background: #e0ecee;
   padding: 25px 15px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
-
-  width: 100%;         /* ✅ full width on mobile */
-  max-width: 360px;    /* ✅ but not too wide */
-  margin: auto;        /* ✅ centers vertically */
-
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
   animation: fadeIn 0.5s ease-in-out;
 }
 
 h2 {
   margin-bottom: 20px;
   color: #333;
-  font-size: 22px; /* ✅ readable on all screens */
+  font-size: 22px;
 }
 
-/* ========== Inputs, Dropdowns, Buttons ========== */
 input, select, button {
-  width: 100%;       /* ✅ full width on mobile */
-  margin: 12px 0;    /* ✅ less spacing for compact view */
+  width: 100%;
+  margin: 12px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;   /* ✅ smaller for mobile */
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -58,7 +50,6 @@ button:hover {
   background: #45a049;
 }
 
-/* ========== Result Text ========== */
 #result {
   margin-top: 15px;
   font-size: 16px;
@@ -66,12 +57,11 @@ button:hover {
   color: #333;
 }
 
-/* ========== Currency Selectors (dropdowns + swap button) ========== */
 .selectors {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* ✅ smaller gap for mobile */
+  gap: 10px;
 }
 
 .swap-btn {
@@ -91,7 +81,6 @@ button:hover {
   transform: rotate(180deg);
 }
 
-/* ========== Footer ========== */
 footer {
   text-align: center;
   font-size: 14px;
@@ -107,13 +96,11 @@ footer strong {
   color: #161510;
 }
 
-/* ========== Animation ========== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========== Mobile Optimizations ========== */
 @media (max-width: 400px) {
   h2 {
     font-size: 20px;
