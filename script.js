@@ -13,7 +13,7 @@ const currencySymbols = {
     GBP: "💷 £",
     JPY: "💴 ¥",
     AUD: "🪙 A$",
-    CAD: "🪙 C$"
+    CAD: "💹 C$"
 };
 
 // Populate dropdowns
