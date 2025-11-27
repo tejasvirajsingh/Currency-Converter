@@ -7,7 +7,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 15px;
+  padding: 10px;
 }
 
 .container {
@@ -83,13 +83,13 @@ button:hover {
 
 footer {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #1a1919;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 footer p {
-  margin: 4px 0;
+  margin: 15px 0;
 }
 
 footer strong {
@@ -101,17 +101,17 @@ footer strong {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 200px) {
   h2 {
-    font-size: 20px;
+    font-size: 10px;
   }
   input, select, button {
-    font-size: 15px;
-    padding: 8px;
+    font-size: 20px;
+    padding: 10px;
   }
   .swap-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
   }
 }
