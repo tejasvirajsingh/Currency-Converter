@@ -5,7 +5,7 @@ const convertBtn = document.getElementById("convertBtn");
 
 const currencies = ["USD", "INR", "EUR", "GBP", "JPY", "AUD", "CAD"];
 
-// Currency symbol map
+// Currency symbol 
 const currencySymbols = {
     USD: "💵 $",
     INR: "💰 ₹",
