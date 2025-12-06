@@ -16,7 +16,7 @@ const currencySymbols = {
     CAD: "💹 C$"
 };
 
-// Populate dropdowns
+// Populate dropdowns are
 currencies.forEach(currency => {
     fromCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
     toCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
